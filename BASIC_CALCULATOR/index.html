@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Enter Number 1" id="num1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter Number 2" id="num2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="operation">
+                        <option value="none">None</option>
+                        <option value="add">Addition</option>
+                        <option value="sub">Subtraction</option>
+                        <option value="mul">Multiplication</option>
+                        <option value="div">Division</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Calculate" onclick="Calc()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="result"></p>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function Calc() {
+            var num1 = Number(document.getElementById('num1').value);
+            var num2 = Number(document.getElementById('num2').value);
+            var op = document.getElementById('operation').value;
+
+            // Switch
+
+            switch (op) {
+                case "none":
+                    var ans = "Please select Proper OPerator";
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "add":
+                    var ans = num1 + num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "sub":
+                    var ans = num1 - num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "mul":
+                    var ans = num1 * num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+                case "div":
+                    var ans = num1 / num2;
+                    document.getElementById('result').innerHTML = ans;
+                    break;
+
+
+
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
